@@ -3,3 +3,24 @@
   align-items: center;
   gap: 10px;
 }
+nav {
+  display: flex;
+}
+ul {
+  display: flex;
+  align-items: center;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  margin: 10px 10px;
+  color: black;
+}
+button a {
+  text-decoration: none;
+  color: black;
+}
