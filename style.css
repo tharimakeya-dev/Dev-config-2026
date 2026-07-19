@@ -23,4 +23,13 @@ ul li a {
 button a {
   text-decoration: none;
   color: black;
+}.meetOne {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  text-align: center;
+}
+.cardPhase {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 20px;
 }
