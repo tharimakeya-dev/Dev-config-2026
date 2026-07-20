@@ -1,10 +1,90 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0px;
+}
+
 #logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-nav {
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: url("./Images/banner.jpg") center center/cover no-repeat;
+  position: relative;
+
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  color: #fff;
+  padding: 20px;
+}
+
+.banner-content h1 {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.banner-content h1 em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.banner-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 35px;
+}.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #2d5bff;
+  color: #fff;
+  padding: 16px 45px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1e45d8;
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+#logo {
+  width: 33%;
+}
+#menu-bar {
+  width: 33%;
 }
 ul {
   display: flex;
@@ -23,13 +103,251 @@ ul li a {
 button a {
   text-decoration: none;
   color: black;
-}.meetOne {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
+}
+.speaker-section {
+  width: 90%;
+  margin: 70px auto;
+}
+
+.title {
   text-align: center;
+  margin-bottom: 40px;
+  font-size: 35px;
+}
+
+.meetOne {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  text-align: center;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.card p {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card h2 {
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.card h4 {
+  color: gray;
+  font-weight: 500;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
 .cardPhase {
+  width: 90%;
+  margin: 50px auto;
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.pricing-card h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.pricing-card h1 {
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+.pricing-card p {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.pricing-card hr {
+  margin: 20px 0;
+  border: 1px solid #eee;
+}
+
+.pricing-card ul {
+  padding-left: 18px;
+}
+
+.pricing-card ul li {
+  margin: 12px 0;
+}
+
+.pricing-card button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  background: white;
+  color: #3b82f6;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pricing-card:hover {
+  background: #0f172a;
+  color: white;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.pricing-card:hover h2,
+.pricing-card:hover p,
+.pricing-card:hover li {
+  color: #d1d5db;
+}
+
+.pricing-card:hover hr {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.pricing-card:hover button {
+  background: #2563eb;
+  color: white;
+  border: none;
+}
+.career-zone {
+  width: 90%;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.career-zone h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.career-zone > p {
+  color: gray;
+  width: 70%;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.career-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.career-card {
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  transition: 0.4s;
+  cursor: pointer;
+  background: white;
+}
+
+.career-card h3 {
+  margin-bottom: 15px;
+}
+
+.career-card p {
+  color: gray;
+  line-height: 1.6;
+}
+
+.career-card:hover {
+  background: #0f172a;
+  color: white;
+  transform: translateY(-8px);
+}
+
+.career-card:hover p {
+  color: #d1d5db;
+}
+
+.career-zone button {
+  margin-top: 40px;
+  padding: 15px 35px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.career-zone button:hover {
+  background: #1d4ed8;
+}
+.footer {
+  background: #111827;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+.footer h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: #cbd5e1;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+  margin: 25px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #3b82f6;
+}
+
+.footer hr {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 20px 0;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #94a3b8;
 }
